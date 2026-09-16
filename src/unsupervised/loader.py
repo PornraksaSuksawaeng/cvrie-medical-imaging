@@ -6,6 +6,7 @@ import pandas as pd
 COLUMNS = ("id", "color", "testimony")
 
 
+# NOTE: The raw file is malformed.
 def read_testimonies(path: str | Path) -> pd.DataFrame:
     """Load the raw CSV into a tidy frame with one row per testimony.
 
