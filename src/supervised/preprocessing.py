@@ -16,6 +16,17 @@ def resize_image(image: np.ndarray, size: tuple[int, int]) -> np.ndarray:
     return cv2.resize(image, size, interpolation=cv2.INTER_AREA)
 
 
+def center_crop(image: np.ndarray, ratio: float = 0.7) -> np.ndarray:
+    """Keep only the central part of the image, based on a ratio of its size."""
+    h, w = image.shape
+    new_h, new_w = int(h * ratio), int(w * ratio)
+
+    top = (h - new_h) // 2
+    left = (w - new_w) // 2
+
+    return image[top : top + new_h, left : left + new_w]
+
+
 def normalize(image: np.ndarray) -> np.ndarray:
     """Scale pixel values to the 0-1 range."""
     return image / 255.0
