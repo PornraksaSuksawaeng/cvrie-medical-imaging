@@ -54,3 +54,12 @@ def top_terms_per_cluster(matrix, labels, feature_names, n_terms: int = 8) -> di
         top = centroid.argsort()[::-1][:n_terms]
         summary[int(label)] = [feature_names[i] for i in top]
     return summary
+
+
+def kmeans_inertia(
+    features, n_clusters: int, random_state: int = RANDOM_STATE
+) -> float:
+    """The value KMeans minimises: sum of squared distances to the nearest centre."""
+    model = KMeans(n_clusters=n_clusters, n_init=20, random_state=random_state)
+    model.fit(features)
+    return model.inertia_
