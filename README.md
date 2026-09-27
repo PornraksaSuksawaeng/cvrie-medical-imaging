@@ -12,14 +12,6 @@ pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 ```
 
-The notebooks need two packages that are not in `requirements.txt` yet:
-
-```bash
-pip install jupyterlab opencv-python
-```
-
-TODO: add `jupyterlab` and `opencv-python` to `requirements.txt`.
-
 ## Project structure
 
 ```
@@ -46,16 +38,13 @@ requirements.txt
 
 Dataset: [Brain Tumor MRI Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
 from Kaggle, with 4 classes (glioma, meningioma, pituitary, notumor). It is not tracked in git,
-so download it and unzip it into `data/raw/supervised/`, keeping its `Training` and `Testing`
-folders.
+so download it and unzip it into `data/raw/supervised/`.
 
 Run the notebook:
 
 ```bash
 jupyter lab notebooks/01_supervised.ipynb
 ```
-
-TODO: there is no training script for this part, everything runs in the notebook.
 
 ## Unsupervised part
 
@@ -76,5 +65,5 @@ stderr and exits with code 84.
 
 ## Authors
 
-- Pornraksa
+- Pornraksa Suksawaeng
 - Leo Bellard
