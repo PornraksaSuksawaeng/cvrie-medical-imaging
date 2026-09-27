@@ -1,2 +1,10 @@
+# Python
+__pycache__/
+.venv/
+
+# Data
 data/raw/
 data/processed/
+
+# Tooling
+.ruff_cache/
