@@ -8,3 +8,4 @@ data/processed/
 
 # Tooling
 .ruff_cache/
+*.pdf
